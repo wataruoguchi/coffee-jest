@@ -1,0 +1,23 @@
+{
+  "name": "coffee-jest",
+  "version": "0.0.1",
+  "description": "Jest CoffeeScript transformer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wataruoguchi/coffee-jest"
+  },
+  "main": "coffee-jest.js",
+  "author": "Wataru Oguchi <wataru.oguchi.0to1@gmail.com> (https://wataruoguchi.com) (https://github.com/wataruoguchi)",
+  "license": "MIT",
+  "scripts": {
+    "unit": "jest test --config test/config/jest.conf.js --no-cache --runInBand --coverage --coverageDirectory test/coverage"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "coffeescript": ">= 1.8.x"
+  }
+}
