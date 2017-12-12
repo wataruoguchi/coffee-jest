@@ -1,5 +1,5 @@
 const coffee = require('coffeescript')
-const crypto = require('crypto')
+const loadBabelConfig = require('./lib/load-babel-config')
 
 module.exports = {
   process: (src, path) => {
@@ -8,17 +8,12 @@ module.exports = {
       {
         bare: true,
         sourceMap: true,
-        transpile: {
-          presets: ['env']
-        }
+        transpile: loadBabelConfig()
       }
     )
     return {
       code: script.js,
       map: script.v3SourceMap
     }
-  },
-  getCacheKey: (fileData, filename, configString) => {
-    return crypto.createHash('md5').update(fileData + filename + configString, 'utf8').digest('hex')
   }
 }

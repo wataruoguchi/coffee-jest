@@ -18,6 +18,7 @@
     "jest": "^21.2.1"
   },
   "dependencies": {
-    "coffeescript": ">= 1.8.x"
+    "coffeescript": ">= 1.8.x",
+    "find-babel-config": "^1.1.0"
   }
 }
